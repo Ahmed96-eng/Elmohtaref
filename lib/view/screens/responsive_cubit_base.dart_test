@@ -1,0 +1,21 @@
+import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:mohtaref_client/controller/cubit/App_cubit.dart';
+import 'package:mohtaref_client/controller/cubit_states/app_states.dart';
+import 'package:mohtaref_client/features/responsive_setup/responsive_builder.dart';
+
+class ResPCubBase extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return ResponsiveBuilder(builder: (context, sizeConfig) {
+      final height = sizeConfig.screenHeight!;
+      final width = sizeConfig.screenWidth!;
+      return BlocConsumer<AppCubit, AppState>(
+          listener: (context, state) {},
+          builder: (context, state) {
+            // var cubit = AppCubit.get(context);
+            return Scaffold();
+          });
+    });
+  }
+}
